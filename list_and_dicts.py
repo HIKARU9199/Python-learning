@@ -1,8 +1,11 @@
+from typing import ItemsView, ValuesView
+
+
 def run():
     my_list = [1, "Hello", True, 4.5]
     my_dict = {"firstname" : "Carlos", "Lastname":"Botero"}
 
-    super_list =[
+    super_list = [
         {"firstname" : "Carlos", "Lastname":"Botero"},
         {"firstname" : "Juan", "Lastname":"Valencia"},
         {"firstname" : "Carolina", "Lastname":"Forero"},
@@ -21,8 +24,11 @@ def run():
     }
 
     for key, value in super_dict.items():
-        print(key, "-", value)   
+         print(key, ">", value)
 
-
+    for values in super_list:
+        for value in values.items():
+         print(values, end='\n')
+    
 if __name__== '__main__':
     run()
